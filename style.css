@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  color-scheme: light;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  color: #172033;
+  background: #f3f6fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 32px 20px;
+  background:
+    radial-gradient(ellipse at 12% 12%, rgba(166, 190, 255, 0.32), transparent 34%),
+    radial-gradient(ellipse at 90% 88%, rgba(190, 222, 255, 0.42), transparent 35%),
+    #f3f6fb;
+}
+
+.login-card {
+  width: min(100%, 440px);
+  padding: 44px 42px 38px;
+  border: 1px solid rgba(224, 230, 240, 0.9);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(32, 54, 91, 0.12);
+}
+
+.brand-mark {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 30px;
+  place-items: center;
+  border-radius: 14px;
+  background: #315ee7;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(49, 94, 231, 0.24);
+}
+
+.eyebrow {
+  margin: 0 0 9px;
+  color: #315ee7;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(25px, 5vw, 30px);
+  letter-spacing: -0.045em;
+  line-height: 1.2;
+}
+
+.intro {
+  margin: 10px 0 30px;
+  color: #737d90;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 9px;
+}
+
+.form-field > label {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid #dce2ec;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  color: #172033;
+  font: inherit;
+  font-size: 14px;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+input::placeholder {
+  color: #a4adbc;
+}
+
+input[type='email']:focus,
+input[type='password']:focus {
+  border-color: #315ee7;
+  box-shadow: 0 0 0 3px rgba(49, 94, 231, 0.13);
+}
+
+.text-link {
+  color: #315ee7;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.text-link:focus-visible,
+button:focus-visible,
+input[type='checkbox']:focus-visible {
+  outline: 3px solid rgba(49, 94, 231, 0.35);
+  outline-offset: 3px;
+}
+
+.remember-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 23px;
+  color: #566176;
+  font-size: 13px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.remember-option input {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  accent-color: #315ee7;
+}
+
+button {
+  width: 100%;
+  min-height: 49px;
+  border: 0;
+  border-radius: 9px;
+  background: #315ee7;
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  background: #244bc4;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.signup-prompt {
+  margin: 25px 0 0;
+  color: #737d90;
+  font-size: 13px;
+  text-align: center;
+}
+
+.signup-prompt .text-link {
+  font-size: inherit;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 34px 25px 30px;
+    border-radius: 16px;
+  }
+}
